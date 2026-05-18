@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Приглашение на свадьбу</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Marck+Script&family=Playfair+Display:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Главное фото с лепестками (02.jpg) -->
+    <div class="main-photo">
+        <div class="overlay">
+            <div class="invitation-text">
+                <h1 class="names">Владислав <span class="ampersand">&</span> Виктория</h1>
+                <div class="date-location">
+                    <p class="date"><i class="far fa-calendar"></i> 1 августа 2026 года</p>
+                    <!-- <p class="location"><i class="fas fa-map-marker-alt"></i> Усадьба "Белая лилия"</p> -->
+                </div>
+                <div class="quote">
+                    <p>Приглашаем разделить с нами<br>радость самого важного дня</p>
+                </div>
+                <div class="scroll-indicator">
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <button id="musicBtn" class="music-btn">
+                    <i class="fas fa-music"></i> <span id="musicBtnText">Включить музыку</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <audio id="weddingMusic" src="111.mp3" loop preload="auto"></audio>
+
+    <!-- Основной контент с РАСТВОРЕНИЕМ фото -->
+    <div class="content-wrapper">
+        <!-- Текст приглашения (03.jpg растворяется в 02.jpg) -->
+        <section class="invitation-message section-bg" 
+                 style="--bg-image: url('044.jpg'); ">
+            <div class="message-content">
+                <h2><i class="fas fa-envelope-open-text"></i> Дорогие друзья и родные!</h2>
+                <div class="message-text">
+                    <p>Мы рады пригласить вас на нашу свадьбу!</p>
+                    <p>Этот день мы мечтали разделить именно с вами — нашими самыми близкими и дорогими людьми. Ваше присутствие сделает наш праздник по-настоящему светлым и счастливым.</p>
+                    <p>Ждём вас, чтобы вместе отпраздновать начало нашего семейного пути.</p>
+                    <div class="signature">
+                        <p>С любовью,</p>
+                        <p class="signature-names">Егор и Елена</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Детали мероприятия (04.jpg растворяется в 03.jpg) -->
+        <section class="details section-bg" 
+                 style="--bg-image: url('033.jpg');">
+            <div class="timeline">
+                <h2><i class="far fa-clock"></i> Расписание дня</h2>
+                
+                <!-- <div class="timeline-item">
+                    <div class="timeline-time">16:00</div>
+                    <div class="timeline-content">
+                        <h3>Сбор гостей</h3>
+                        <p>Встреча гостей, welcome-зона с напитками</p>
+                    </div>
+                </div> -->
+
+                <div class="timeline-item">
+                    <div class="timeline-time">15:15</div>
+                    <div class="timeline-content">
+                        <h3>Трансфер для гостей</h3>
+                        <p>Для Вашего удобства в 15:15 Вас будет ждать автобус в центре города, который довезет до места мероприятия. Также автобус поедет до центра города и после мероприятия</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-time">16:00</div>
+                    <div class="timeline-content">
+                        <h3>Церемония</h3>
+                        <p>Торжественное бракосочетание на пирсе</p>
+                    </div>
+                </div>
+                
+                <!-- <div class="timeline-item">
+                    <div class="timeline-time">16:30</div>
+                    <div class="timeline-content">
+                        <h3>Фотографии</h3>
+                        <p>Свадебная фотосессия, прогулка по парку</p>
+                    </div>
+                </div> -->
+                
+                <div class="timeline-item">
+                    <div class="timeline-time">17:00</div>
+                    <div class="timeline-content">
+                        <h3>Банкет</h3>
+                        <p>Праздничный ужин, тосты и поздравления</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <!-- <div class="timeline-time">
+                        <i class="fas fa-temperature-low"></i>
+                    </div> -->
+                    <div class="timeline-content">
+                        <h3>Погода</h3>
+                        <p>Днём будет тепло, а к вечеру может стать прохладно. Пожалуйста, захватите с собой накидки или кофты — нам важно, чтобы вам было комфортно!</p>
+                    </div>
+                </div>
+                
+                <!-- <div class="timeline-item">
+                    <div class="timeline-time">20:00</div>
+                    <div class="timeline-content">
+                        <h3>Торт и танцы</h3>
+                        <p>Разрезание свадебного торта, первый танец</p>
+                    </div>
+                </div> -->
+            </div>
+        </section>
+
+        <!-- Дресс-код (05.jpg растворяется в 04.jpg) -->
+        <section class="dress-code section-bg" 
+                 style="--bg-image: url('044.jpg');">
+            <div class="dress-content">
+                <h2><i class="fas fa-user-tie"></i> Дресс-код</h2>
+                <p class="dress-intro">Мы будем благодарны, если вы поддержите палитру нашего праздника в нежных зелёных и пастельных оттенках</p>
+                
+                <div class="dress-guidelines">
+                    <div class="guideline">
+                        <i class="fas fa-female"></i>
+                        <p><strong>Для девушек:</strong> цвета Тиффани</p>
+                    </div>
+
+                    <!-- Цветовая палитра (кружочки) -->
+                    <div class="color-palette">
+                        <div class="color-circle" style="background-color: #B8D2C9;"></div>
+                        <div class="color-circle" style="background-color: #87B3B4;"></div>
+                        <div class="color-circle" style="background-color: #4E838B;"></div>
+                    </div>
+                    <div class="guideline">
+                        <i class="fas fa-male"></i>
+                        <p><strong>Для мужчин:</strong> свободная классика</p>
+                    </div>
+                    <!-- <div class="guideline">
+                        <i class="fas fa-palette"></i>
+                        <p><strong>Цветовая гамма:</strong> нежные зелёные, бежевые, кремовые и пастельные оттенки</p>
+                    </div> -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Форма подтверждения (06.jpg растворяется в 05.jpg) -->
+        <section class="rsvp section-bg" 
+                 style="--bg-image: url('066.jpg');">
+            <div class="rsvp-content">
+                <h2><i class="far fa-check-circle"></i> Подтвердите, пожалуйста</h2>
+                 <p class="rsvp-intro">Будем очень рады, если вы сможете разделить с нами этот день</p>
+                
+                <form id="rsvpForm">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <input type="text" id="name" placeholder="Ваше имя" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <select id="attendance" required>
+                                <option value="" disabled selected>Присутствие</option>
+                                <option value="yes">С радостью буду</option>
+                                <option value="plusone">Буду с парой</option>
+                                <option value="family">Придём семьёй</option>
+                                <option value="no">К сожалению, не смогу</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <!-- Опросник про алкоголь -->
+                    <div class="form-group alcohol-group">
+                        <label class="alcohol-label"><i class="fas fa-wine-bottle"></i> Что предпочитаете из алкоголя?</label>
+                        <div class="checkbox-groЫup">
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="alcohol" value="wine"> Вино
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="alcohol" value="champagne"> Шампанское
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="alcohol" value="vodka"> Водка
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="alcohol" value="whiskey"> Виски
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="alcohol" value="cognac"> Коньяк
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="alcohol" value="cocktail"> Коктейли
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="alcohol" value="no"> Не пью алкоголь
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <textarea id="message" placeholder="Ваши пожелания или особые предпочтения..." rows="3"></textarea>
+                    </div>
+                    
+                    <div class="form-note">
+                        <p><i class="fas fa-info-circle"></i> Пожалуйста, ответьте до 1 июля</p>
+                    </div>
+                    
+                    <button type="submit" class="submit-btn">
+                        <i class="far fa-paper-plane"></i> Отправить ответ
+                    </button>
+                </form>
+                
+                <div id="formMessage" class="form-message"></div>
+            </div>
+        </section>
+
+        <!-- Контакты с таким же плавным переходом -->
+        <section class="contacts section-bg" 
+                 style="--bg-image: url('044.jpg');">
+            <div class="contacts-content">
+                <h2><i class="fas fa-phone-alt"></i> Контакты</h2>
+                
+                
+                <div class="contact-cards">
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <div class="contact-info">
+                            <h3>Невеста</h3>
+                            <!-- <p>Организатор свадьбы</p> -->
+                            <p class="phone">+7 (XXX) XXX-XX-XX</p>
+                            <h3>Ведущий Сергей</h3>
+                                <!-- <p>Ведущий</p> -->
+                            <p class="phone">+7 (XXX) XXX-XX-XX</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marked-alt"></i>
+                        </div>
+                        <div class="contact-info">
+                            <h3>Место проведения</h3>
+                            <p>кафе «Бриз»</p>
+                            <p class="address">Краснодарский край, г. Геленджик, <br> х. Джанхот, Морской переулок, 1А</p>
+                            <a href="https://2gis.ru/novorossiysk/geo/70000001093038635" target="_blank" class="map-btn">
+                                <i class="fas fa-map-pin"></i> Показать на карте
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Пожелания (новая секция с растворением фото) -->
+    <section class="wishes section-bg" 
+            style="--bg-image: url('033.jpg');">
+        <div class="wishes-content">
+            <h2><i class="fas fa-leaf"></i> Наши пожелания</h2>
+            
+            <div class="wish-item">
+                <div class="wish-icon">
+                    <i class="fas fa-hand-holding-heart"></i>
+                </div>
+                <div class="wish-text">
+                    <h3>Подарки</h3>
+                    <p>Мы не хотим обременять Вас выбором подарков, поэтому будем рады вкладу в наш семейный бюджет.</p>
+                    <p>Букеты прекрасны, но так недолговечны... Мы же мечтаем о чём-то живом, что будет цвести и расти вместе с нашей семьёй. Если захотите порадовать нас цветами — подарите, пожалуйста, садовые: в горшках, кашпо или рассаду. </p>
+                </div>
+            </div>
+            
+            <div class="wish-item">
+                <div class="wish-icon">
+                    <i class="fas fa-baby-carriage"></i>
+                </div>
+                <div class="wish-text">
+                    <h3>Просьба к гостям</h3>
+                    <p>Очень надеемся, что у Вас будет возможность оставить маленьких детей под присмотром дома и полностью погрузиться в атмосферу праздника вместе с нами.</p>
+                </div>
+            </div>
+
+            <div class="wish-item">
+                <div class="wish-icon">
+                    <i class="fas fa-microphone-alt"></i>
+                </div>
+                <div class="wish-text">
+                    <h3>Творческие подарки</h3>
+                    <p>Если Вы подготовили какой-либо творческий подарок, пожалуйста, обращайтесь к нашему ведущему</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Секция Фотографии -->
+<section class="photos-section section-bg" 
+         style="--bg-image: url('044.jpg');">
+    <div class="photos-content">
+        <h2><i class="fas fa-camera"></i> Фотографии</h2>
+        
+        <div class="photos-text">
+            <div class="photo-icon">
+                <i class="fas fa-users"></i>
+            </div>
+            <!-- <p>На нашей свадьбе не будет профессионального фотографа. <strong>Нашим фотографом станете Вы — наши дорогие гости!</strong></p> -->
+            <p>Мы будем очень благодарны, если вы будете делать красивые, живые и искренние фотографии этого дня, а затем поделитесь ими с нами.</p>
+            <p>Все снимки мы соберём в нашем семейном архиве, а лучшие войдут в историю нашей любви</p>
+        </div>
+        
+        <div class="telegram-info">
+            <!-- <i class="fab fa-telegram-plane"></i> -->
+            <p>Присылайте фото в наш <strong>общий чат в MAX</strong></p>
+        </div>
+        
+        <a href="https://max.ru/join/gF1pyzkimvnfqw2iIXiPJK8vFrvPhc8cK0KN9AhtTNk" target="_blank" class="telegram-btn">
+            <i class="fab fa-telegram"></i> Перейти в чат
+        </a>
+    </div>
+</section>
+
+        <!-- Футер -->
+        <footer>
+            <!-- <div class="footer-content">
+                 <p class="footer-quote">"Любовь — это когда две половинки находят друг друга и становятся одним целым"</p>
+                <div class="footer-names">
+                    <div class="name">Егор</div>
+                    <div class="heart"><i class="fas fa-heart"></i></div>
+                    <div class="name">Елена</div>
+                </div>
+                <p class="wedding-date">26 июня 2026 года</p>
+            </div> 
+            
+            <div class="floral-border"></div>
+        </footer> !-->
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
